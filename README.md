@@ -112,6 +112,14 @@ curl.exe -X POST "http://127.0.0.1:8030/tickets/1/reply-suggestion"
 
 更多接口示例见 [docs/api_examples.md](docs/api_examples.md)。
 
+## 运行测试
+
+测试使用 `pytest` 和 FastAPI `TestClient`，会通过 `DATABASE_PATH` 指向临时 SQLite 文件，不会写入正式的 `data/tickets.db`。
+
+```powershell
+pytest
+```
+
 ## 可选 LLM API
 
 默认不需要 API key。没有 key 时，系统用规则分类和模板回复。
