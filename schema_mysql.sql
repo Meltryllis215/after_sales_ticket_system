@@ -1,0 +1,16 @@
+CREATE TABLE tickets (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  customer_name VARCHAR(80) NOT NULL,
+  contact VARCHAR(120),
+  channel VARCHAR(40) NOT NULL,
+  title VARCHAR(160) NOT NULL,
+  description TEXT NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  priority VARCHAR(20) NOT NULL,
+  department VARCHAR(50) NOT NULL,
+  status VARCHAR(30) NOT NULL,
+  ai_summary TEXT,
+  suggested_reply TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
